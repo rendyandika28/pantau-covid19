@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@400;500&display=swap"
+    rel="stylesheet" />
+
+  <!-- ChartJS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+    integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="icon" href="assets/img/virus.png">
+  <title>Pantau Covid19</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row logo">
+      <div class="col-12 text-center pt-2">
+        <a class="navbar-brand" href="#">
+          <img src="assets/img/virus.png" width="30" height="30" class="d-inline-block align-top" alt=""
+            loading="lazy" />
+          <span class="ml-2 font-weight-bold">PANTAU COVID 19</span>
+        </a>
+      </div>
+    </div>
+    <div class="row d-flex justify-content-xl-between justify-content-sm-center content-section mt-3">
+      <div
+        class="col-xl-5 col-lg-10 col-md-9 col-12 d-flex justify-content-lg-center align-items-lg-start content-left">
+        <h1>#<span class="animate"></span></h1>
+        <blockquote class="blockquote">
+          <p class="font-italic">
+            "Kesehatan selalu tampak berharga setelah kita kehilangannya"
+          </p>
+          <footer class="blockquote-footer">Jonathan Swift</footer>
+        </blockquote>
+      </div>
+      <div
+        class="col-xl-6 col-lg-10 col-md-9 col-12 d-flex justify-content-lg-center align-items-lg-center content-right">
+        <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-arrow-clockwise mb-1 ml-auto"
+          fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M3.17 6.706a5 5 0 0 1 7.103-3.16.5.5 0 1 0 .454-.892A6 6 0 1 0 13.455 5.5a.5.5 0 0 0-.91.417 5 5 0 1 1-9.375.789z" />
+          <path fill-rule="evenodd"
+            d="M8.147.146a.5.5 0 0 1 .707 0l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 1 1-.707-.708L10.293 3 8.147.854a.5.5 0 0 1 0-.708z" />
+        </svg>
+        <span style="width: 100%;" class="span-alert"> </span>
+        <canvas id="myChart"></canvas>
+        <p class="sumber text-muted">*Sumber Data: <a href="https://kawalcorona.com/"
+            target="_blank">kawalcorona.com</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <script src="main.js"></script>
+  <script src="vendor/typed.min.js"></script>
+  <script>
+    var typed = new Typed(".animate", {
+      strings: ["TETAPDIRUMAH", "TETAPSEMANGAT", "JAGAKESEHATAN"],
+      typeSpeed: 50,
+      backSpeed: 50,
+      loop: true,
+      backDelay: 1500,
+      smartBackspace: true,
+    });
+  </script>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
