@@ -46,7 +46,7 @@ refresh.addEventListener("click", function () {
 });
 
 function getData() {
-  const url = "https://api.kawalcorona.com/indonesia";
+  const url = "https://corona.coollabs.work/country/indonesia";
 
   return fetch(url, {
     method: "GET",
@@ -57,16 +57,12 @@ function getData() {
 async function storeData() {
   const value = await getData();
   let dataCovid = {
-    positif: value[0].positif,
-    sembuh: value[0].sembuh,
-    dirawat: value[0].dirawat,
-    meninggal: value[0].meninggal,
+    Confirmed: value.Confirmed,
+    Recovered: value.Recovered,
+    Active: value.Active,
+    Deaths: value.Deaths,
   };
   return dataCovid;
-}
-
-function parseToInt(data) {
-  return parseInt(data.replace(",", ""));
 }
 
 document.addEventListener("DOMContentLoaded", updateUI);
@@ -74,13 +70,13 @@ document.addEventListener("DOMContentLoaded", updateUI);
 function updateUI() {
   const values = storeData();
 
-  storeData()
-    .then((values) => {
+  values
+    .then((value) => {
       myChart.data.datasets[0].data.push(
-        parseToInt(values.positif),
-        parseToInt(values.sembuh),
-        parseToInt(values.dirawat),
-        parseToInt(values.meninggal)
+        value.Confirmed,
+        value.Recovered,
+        value.Active,
+        value.Deaths
       );
       myChart.update();
     })
