@@ -66,6 +66,11 @@ blockquote footer {
   font-size: .8rem;
 }
 
+.heart:before {
+  content: "\2764";
+  color: #ffce46;
+}
+
 .bi {
   transition: 2s;
 }
